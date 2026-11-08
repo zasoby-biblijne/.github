@@ -1,50 +1,34 @@
 # Zasoby biblijne
 
-**Materiały, które pomagają poznawać i studiować Pismo Święte.**
+**Polski projekt cyfrowy wspierający dostęp do materiałów i narzędzi do studiowania Biblii.**
 
-[Otwórz serwis](https://zasobybiblijne.org)
+Organizacja GitHub `zasoby-biblijne` skupia repozytoria składające się na projekt
+**Zasoby biblijne**. Aplikacja gromadzi różne materiały biblijne i udostępnia je
+w jednym serwisie, wyposażonym w wyszukiwarkę oraz narzędzia ułatwiające
+korzystanie z treści.
 
-## O projekcie
+W serwisie znajdują się między innymi książki, czasopisma i artykuły, informacje
+o rodowodach biblijnych, śpiewniki oraz rozważania na każdy dzień. Treści i
+funkcje aplikacji są rozwijane w kilku repozytoriach, a ich głównymi elementami
+są backend i frontend.
 
-Zasoby biblijne łączą książki, czasopisma i artykuły z wyszukiwaniem,
-rodowodami biblijnymi, śpiewnikami oraz rozmyślaniami na każdy dzień.
-Serwis jest dopasowany do telefonu, tabletu i komputera.
+## Jak działa projekt
 
-Rozwijamy **jeden interfejs webowy**. Backend NestJS dostarcza dane i wyszukiwanie,
-frontend Next.js prezentuje treści, a aplikacja mobilna Expo wyświetla ten sam serwis
-w WebView na Androidzie i iOS — bez odtwarzania jego funkcji natywnie.
-Aplikacja mobilna wymaga internetu. Jej przygotowanie nie oznacza jeszcze publikacji
-w sklepach.
-
-## Polecane źródła
-
-Jeśli szukasz dodatkowych materiałów — również wtedy, gdy główny serwis jest niedostępny:
-
-| Strona                                          | Materiały                                      |
-| ----------------------------------------------- | ---------------------------------------------- |
-| [Wykłady biblijne](https://wykladybiblijne.org) | Wykłady i nagrania do studiowania Biblii       |
-| [Śpiewniki](https://spiewniki.klalo.pl)         | Pieśni i śpiewniki                             |
-| [Na Straży](https://nastrazy.org)               | Artykuły i czasopismo „Na Straży”              |
-| [Archiwum „Na Straży”](https://nastrazy.pl)     | Archiwalne materiały i publikacje              |
-| [Zbawienie.pl](https://zbawienie.pl)            | Artykuły i rozważania biblijne                 |
-| [Pastor Russell](https://www.pastorrussell.pl)  | Publikacje i materiały historyczne             |
-| [Dabhar](https://dabhar.org)                    | Materiały pomocne w studiowaniu Pisma Świętego |
+Frontend udostępnia aplikację webową, a backend dostarcza jej dane, treści i
+funkcje wyszukiwania. Aplikacja mobilna na Androida i iOS wyświetla ten sam
+serwis w komponencie WebView, zamiast niezależnie implementować jego funkcje.
+Do działania wymaga połączenia z internetem.
 
 ## Repozytoria organizacji
 
-| Repozytorium                                                                  | Odpowiedzialność                                                   |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| `backend` · prywatne                                                          | API, korpus treści, wyszukiwanie oraz wspólna infrastruktura       |
-| `frontend` · prywatne                                                         | Responsywna aplikacja webowa                                       |
-| `mobile` · prywatne                                                           | Aplikacja WebView na Androida i iOS oraz przygotowanie dystrybucji |
-| [`.github`](https://github.com/zasoby-biblijne/.github) · publiczne           | Ten profil organizacji                                             |
-| [`landing-page`](https://github.com/zasoby-biblijne/landing-page) · publiczne | Samodzielny ekran awaryjny z polecanymi linkami                    |
+| Repozytorium                                                                  | Rola w projekcie                                                                                                         |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `backend` · prywatne                                                          | API, korpus treści, wyszukiwanie oraz zaplecze wspierające działanie serwisu.                                            |
+| `frontend` · prywatne                                                         | Aplikacja webowa z interfejsem do przeglądania i wyszukiwania materiałów na telefonach, tabletach i komputerach.         |
+| `mobile` · prywatne                                                           | Aplikacja mobilna oparta na Expo, która udostępnia serwis webowy w WebView i zawiera konfigurację dla Androida oraz iOS. |
+| [`landing-page`](https://github.com/zasoby-biblijne/landing-page) · publiczne | Niezależna od aplikacji strona informacyjna i awaryjna.                                                                  |
+| [`.github`](https://github.com/zasoby-biblijne/.github) · publiczne           | Profil organizacji i informacje o projekcie publikowane na GitHub.                                                       |
 
-Dokumentacja techniczna i instrukcje uruchomienia znajdują się w odpowiednich repozytoriach.
-Publiczny profil nie zawiera danych dostępowych ani konfiguracji prywatnych usług.
-
----
-
-> „Cokolwiek czynicie, z duszy czyńcie jako dla Pana, a nie dla ludzi.”
->
-> Kolosan 3:23
+Repozytoria backendu, frontendu i aplikacji mobilnej zawierają szczegółowe
+informacje o architekturze, konfiguracji i sposobie uruchomienia poszczególnych
+części systemu.
